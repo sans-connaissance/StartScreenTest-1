@@ -8,13 +8,16 @@
 import SpriteKit
 import GameplayKit
 
+
+
 class GameScene: SKScene {
-    
-    var gameStart = false
-    
+   
+
     override func didMove(to view: SKView) {
-        
+
         startScreen()
+
+        
     }
     
     
@@ -51,14 +54,4 @@ class GameScene: SKScene {
         
     }
     
-    func startScreen() {
-        if !gameStart {
-            
-            let gameStartScene: GameStartScene = GameStartScene(size: size)
-            
-            view?.presentScene(gameStartScene)
-            gameStart = true
-            
-        }
-    }
 }

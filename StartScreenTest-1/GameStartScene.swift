@@ -15,19 +15,31 @@ class GameStartScene: SKScene {
         createStartScreen()
     }
     
+    
+    
     func createStartScreen() {
-        
-        let gameOverLabel = SKLabelNode(fontNamed: "Courier")
-        gameOverLabel.fontSize = 50
-        gameOverLabel.fontColor = SKColor.white
-        gameOverLabel.text = "Start Game!"
-        gameOverLabel.position = CGPoint(x: self.size.width/2, y: 2.0 / 3.0 * self.size.height);
-        
-        self.addChild(gameOverLabel)
-                
         // black space color
         self.backgroundColor = SKColor.black
+        
+        let startGameLabel = SKLabelNode(fontNamed: "Courier")
+        //need to name the label for detecting touches
+        startGameLabel.name = "startGame"
+        
+        startGameLabel.fontSize = 50
+        startGameLabel.fontColor = SKColor.white
+        startGameLabel.text = "Start Game!"
 
+        startGameLabel.position = CGPoint(x: self.size.width/2, y: 2.0 / 3.0 * self.size.height)
+        
+        let optionsButtonLabel = SKLabelNode(fontNamed: "Courier")
+        optionsButtonLabel.fontSize = 35
+        optionsButtonLabel.fontColor = SKColor.white
+        optionsButtonLabel.text = "Options"
+        optionsButtonLabel.position = CGPoint(x: self.size.width/2, y: 1.0 / 3.0 * self.size.height)
+        
+        self.addChild(startGameLabel)
+        self.addChild(optionsButtonLabel)
+        
+                 
     }
-
 }
