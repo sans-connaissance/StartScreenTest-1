@@ -8,5 +8,4 @@
 import SpriteKit
 
 
-var gameStart = false
-var optionsStart = false
+

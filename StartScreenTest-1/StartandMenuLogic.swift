@@ -20,7 +20,11 @@ extension GameScene {
     }
     
     func optionsScreen() {
-        if optionsStart {
+        if optionsStart == true {
+            
+            let optionScene: OptionsScene = OptionsScene(size: size)
+
+            view?.presentScene(optionScene)
             
         }
         

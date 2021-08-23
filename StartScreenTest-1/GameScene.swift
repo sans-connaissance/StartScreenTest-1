@@ -8,14 +8,19 @@
 import SpriteKit
 import GameplayKit
 
-
+var gameStart = false
+var optionsStart = false
 
 class GameScene: SKScene {
    
 
+
     override func didMove(to view: SKView) {
 
         startScreen()
+        
+        
+        optionsScreen()
 
         
     }
@@ -35,6 +40,15 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
+        let touch: UITouch = touches.first!
+        let location = touch.location(in: self)
+        let touchedNode = self.atPoint(location)
+        
+        if let name = touchedNode.name {
+            if name == "optionsButton" {
+                optionsStart = true
+            }
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

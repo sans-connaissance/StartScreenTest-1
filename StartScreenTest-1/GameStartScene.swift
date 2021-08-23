@@ -15,7 +15,7 @@ class GameStartScene: SKScene {
         createStartScreen()
     }
     
-    
+
     
     func createStartScreen() {
         // black space color
@@ -32,6 +32,8 @@ class GameStartScene: SKScene {
         startGameLabel.position = CGPoint(x: self.size.width/2, y: 2.0 / 3.0 * self.size.height)
         
         let optionsButtonLabel = SKLabelNode(fontNamed: "Courier")
+        startGameLabel.name = "optionsButton"
+        
         optionsButtonLabel.fontSize = 35
         optionsButtonLabel.fontColor = SKColor.white
         optionsButtonLabel.text = "Options"
